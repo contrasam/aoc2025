@@ -91,4 +91,4 @@ node_modules/
 .env.production.local
 
 # Scala build
-.scala_build
+.scala_build/
