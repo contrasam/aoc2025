@@ -24,7 +24,7 @@ def solvePart2(lines: Seq[String], previousPos: Int = 50, seenZero: Int = 0): In
         case _ => seenZero
 
 
-def ceilRotation(rotated: Int): Int = ((rotated % 100) + 100) % 100
+def ceilRotation(rotated: Int): Int = Math.floorMod(rotated, 100)
 
 def rotate(rotation: String, currentPos: Int): Int =
     val rotationAmount = rotation.tail.toInt 

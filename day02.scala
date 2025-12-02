@@ -9,7 +9,7 @@ import scala.util.boundary, boundary.break
   val invalidProductIds = ranges.map(parseProductIdRange).flatMap(getInvalidProducIdsInRange)
   val invalidProductIdsV2 = ranges.map(parseProductIdRange).flatMap(getInvalidProducIdsInRangeV2)
   println(s"Part 1: ${invalidProductIds.sum}")
-  println(s"Part 1: ${invalidProductIdsV2.sum}")
+  println(s"Part 2: ${invalidProductIdsV2.sum}")
 
 case class ProductIdRange(low: Long, high: Long)
 
