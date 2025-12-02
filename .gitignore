@@ -92,3 +92,6 @@ node_modules/
 
 # Scala build
 .scala-build/
+
+# Advent of Code inputs (puzzle inputs shouldn't be in public repos)
+inputs/
