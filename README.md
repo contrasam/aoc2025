@@ -5,7 +5,7 @@ This repository contains my solutions to [Advent of Code 2025](https://adventofc
 ## Solutions Progress
 
 - [x] Day 1: Secret Entrance
-- [ ] Day 2: TBD
+- [x] Day 2: Gift Shop
 - [ ] Day 3: TBD
 - [ ] Day 4: TBD
 - [ ] Day 5: TBD
@@ -15,4 +15,4 @@ This repository contains my solutions to [Advent of Code 2025](https://adventofc
 - [ ] Day 9: TBD
 - [ ] Day 10: TBD
 - [ ] Day 11: TBD
-- [ ] Day 12: TBD 
+- [ ] Day 12: TBD

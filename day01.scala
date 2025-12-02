@@ -1,11 +1,12 @@
 import scala.io.Source
+import scala.annotation.tailrec
 
 @main def day01(): Unit =
   val input = Source.fromFile("inputs/day01.txt").getLines().toSeq
   println(s"Part 1: ${solvePart1(input)}")
   println(s"Part 2: ${solvePart2(input)}")
 
-
+@tailrec
 def solvePart1(lines: Seq[String], currentPos: Int = 50, seenZero: Int = 0): Int =
     lines match
         case head +: tail =>
@@ -13,7 +14,8 @@ def solvePart1(lines: Seq[String], currentPos: Int = 50, seenZero: Int = 0): Int
             val newSeen = if(nextPos == 0) seenZero + 1 else seenZero
             solvePart1(tail, nextPos, newSeen)
         case _ => seenZero
-    
+
+@tailrec    
 def solvePart2(lines: Seq[String], previousPos: Int = 50, seenZero: Int = 0): Int =
     lines match
         case head +: tail =>
