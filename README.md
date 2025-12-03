@@ -6,7 +6,7 @@ This repository contains my solutions to [Advent of Code 2025](https://adventofc
 
 - [x] Day 1: Secret Entrance
 - [x] Day 2: Gift Shop
-- [ ] Day 3: TBD
+- [x] Day 3: Lobby
 - [ ] Day 4: TBD
 - [ ] Day 5: TBD
 - [ ] Day 6: TBD
