@@ -32,15 +32,15 @@ def largestJoltagePossible(
 def largestJoltagePossibleV2(
     joltages: List[Long],
     removals: Int,
-    sequence: List[Long] = Nil
+    picked: List[Long] = Nil
 ): Long =
   joltages match
     case joltage :: tail =>
-      if (removals > 0 && sequence.nonEmpty && joltage > sequence.last) then
-        largestJoltagePossibleV2(joltages, removals - 1, sequence.init)
-      else largestJoltagePossibleV2(tail, removals, sequence :+ joltage)
+      if (removals > 0 && picked.nonEmpty && joltage > picked.last) then
+        largestJoltagePossibleV2(joltages, removals - 1, picked.init)
+      else largestJoltagePossibleV2(tail, removals, picked :+ joltage)
 
     case Nil =>
       if (removals > 0) then
-        largestJoltagePossibleV2(Nil, removals - 1, sequence.init)
-      else sequence.mkString.toLong
+        largestJoltagePossibleV2(Nil, removals - 1, picked.init)
+      else picked.mkString.toLong
