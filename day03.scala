@@ -14,14 +14,14 @@ import scala.annotation.tailrec
   )
 
 def largestJoltagePossible(
-    joltages: List[Long],
-    largeSeen: Long,
+    bank: List[Long],
+    previousMax: Long,
     maxJoltage: Long
 ): Long =
-  joltages match
+  bank match
     case joltage :: tail =>
-      val newMaxJoltage = largeSeen * 10 + joltage
-      val newSeen = if joltage > largeSeen then joltage else largeSeen
+      val newMaxJoltage = previousMax * 10 + joltage
+      val newSeen = if joltage > previousMax then joltage else previousMax
       largestJoltagePossible(
         tail,
         newSeen,
@@ -30,14 +30,14 @@ def largestJoltagePossible(
     case _ => maxJoltage
 
 def largestJoltagePossibleV2(
-    joltages: List[Long],
+    bank: List[Long],
     removals: Int,
     picked: List[Long] = Nil
 ): Long =
-  joltages match
+  bank match
     case joltage :: tail =>
       if (removals > 0 && picked.nonEmpty && joltage > picked.last) then
-        largestJoltagePossibleV2(joltages, removals - 1, picked.init)
+        largestJoltagePossibleV2(bank, removals - 1, picked.init)
       else largestJoltagePossibleV2(tail, removals, picked :+ joltage)
 
     case Nil =>
